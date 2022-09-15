@@ -1,3 +1,36 @@
 <resources>
-    <string name="app_name">HealthCareApp-Android</string>
+    <string name="title_activity_login">LoginActivity</string>
+
+    <!--    loading screen-->
+    <string name="title_loading_screen">Healthy</string>
+    <string name="title_loading_screen_button">Get Started</string>
+
+    <!--    Login screen-->
+    <string name="title_Login_screen">Sign In</string>
+    <string name="title_Login_screen_loginButton">Sign In</string>
+    <string name="title_Login_screen_signUpButton">Sign Up</string>
+    <string name="title_Login_screen_forgotPassword">Forgot Password?</string>
+    <string name="title_Login_screen_username_input_hint">Username</string>
+    <string name="title_Login_screen_password_input_hint">Password</string>
+
+
+    <!--    Signup screen-->
+    <string name="title_signup_screen">Sign Up</string>
+    <string name="title_Signup_screen_signUpButton">Sign Up</string>
+    <string name="title_SignUp_screen_firstname_input_hint">Firstname</string>
+    <string name="title_SignUp_screen_lastname_input_hint">Lastname</string>
+    <string name="title_SignUp_screen_username_input_hint">Username</string>
+    <string name="title_SignUp_screen_password_input_hint">Password</string>
+    <string name="title_Signup_screen_dateOfBirth_input_hint">Date of Birth</string>
+    <string name="title_Signup_screen_email_input_hint">Email</string>
+
+
+    <!--    UserProfile screen-->
+    <string name="title_userProfile">Profile</string>
+    <string name="title_text_userProfile_username">Username</string>
+    <string name="title_text_userProfile_dateOfBirth">Date of birth</string>
+    <string name="title_text_userProfile_email">Email</string>
+
+
+
 </resources>
