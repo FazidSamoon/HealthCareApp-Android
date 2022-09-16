@@ -22,16 +22,16 @@
         android:id="@+id/headingMain" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/login"
+        android:id="@+id/getStarted"
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:layout_below="@id/headingMain"
-        android:text="@string/title_loading_screen_button"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="100dp"
         android:layout_centerHorizontal="true"
-        android:background="@color/teal_700"/>
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/teal_700"
+        android:text="@string/title_loading_screen_button" />
 
 
 </RelativeLayout >
