@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserProfile"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:id="@+id/profile_banner"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/primary_btn"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/image_frame"
+                android:clipToOutline="true"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="@string/title_text_userProfile_username"
+                android:textColor="@color/bg_main"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_banner"
+
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/profile_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="5dp"
+                android:gravity="center">
+
+                <RelativeLayout
+
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/nameField"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="3"
+                            android:text="@string/title_text_userProfile_username"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="Fazid Samoon" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/emailField"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/nameField"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="3"
+                            android:text="@string/title_text_userProfile_email"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="Fazid Samoon" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/dobField"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/emailField"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="3"
+                            android:text="@string/title_text_userProfile_dateOfBirth"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="22" />
+                    </LinearLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+                        android:layout_below="@id/dobField"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginHorizontal="40dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="21dp"
+                        android:text="@string/title_text_userprofile_edit_details"
+                        app:backgroundTint="@color/bg_main" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/food_plans"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@id/profile_details"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/food_plan"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#50000000"
+                    android:textSize="30dp"
+                    android:text="Food Plans"
+                    android:textColorHint="@color/white"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_main"
+                    android:gravity="center" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/workout_plans"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@id/food_plans"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/food_plan"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#50000000"
+                    android:textSize="30dp"
+                    android:text="Food Plans"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_main"
+                    android:gravity="center" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/bmi_calculator"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@id/workout_plans"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/food_plan"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#50000000"
+                    android:textSize="30dp"
+                    android:text="Food Plans"
+                    android:textColorHint="@color/white"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_main"
+                    android:gravity="center" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
