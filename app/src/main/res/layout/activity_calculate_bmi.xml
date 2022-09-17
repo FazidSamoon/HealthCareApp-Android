@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.Calculate_BMI"
+    android:padding="20dp">
+
+    <RelativeLayout
+        android:id="@+id/heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:background="@color/bg_main">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/title_bmi_view"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:textSize="30dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="5"
+            android:layout_below="@id/title"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/bmi_index"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:layout_weight="2"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="20.6"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </RelativeLayout>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/calculate_bmi_button"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@id/heading"
+        android:layout_marginTop="30dp"
+        android:text="@string/calculate_bmi"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/bg_main" />
+
+    <RelativeLayout
+        android:id="@+id/analysis_view"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@id/calculate_bmi_button"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/list_view_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/bmi_analysis"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/list_view_title"
+            android:layout_marginTop="20dp">
+        </ListView>
+    </RelativeLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/analysis_view"
+        android:layout_marginTop="20dp">
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="0dp"
+            android:gravity="bottom"
+            app:fabCradleMargin="8dp"
+            app:fabCradleRoundedCornerRadius="58dp"
+            app:fabCradleVerticalOffset="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+                <LinearLayout
+                    android:id="@+id/home_button_bottomAppBar"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:src="@drawable/user" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Home"
+                        android:textColor="@color/text_main"
+                        android:textSize="12sp"
+                        android:textAlignment="center" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/account_button_bottomAppBar"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:src="@drawable/home" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Home"
+                        android:textColor="@color/text_main"
+                        android:textSize="12sp"
+                        android:textAlignment="center" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/settings_button_bottomAppBar"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:src="@drawable/settings"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Home"
+                        android:textColor="@color/text_main"
+                        android:textSize="12sp"
+                        android:textAlignment="center" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/bg_main"
+            android:src="@drawable/home"
+            app:backgroundTint="#ff5e00"
+            app:layout_anchor="@id/app_bar"
+            ></com.google.android.material.floatingactionbutton.FloatingActionButton>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</RelativeLayout>

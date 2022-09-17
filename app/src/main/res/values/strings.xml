@@ -32,7 +32,26 @@
     <string name="title_text_userProfile_dateOfBirth">Date of birth</string>
     <string name="title_text_userProfile_email">Email</string>
     <string name="title_text_userprofile_edit_details">Edit Profile</string>
+    <string name="title_text_userprofile_workout_plan">Workout Plan</string>
+    <string name="title_text_userprofile_food_plan">Food Plan</string>
+    <string name="title_text_userprofile_calculate_BMI">Calculate BMI</string>
 
+    <!--    BMI view-->
+    <string name="title_bmi_view">Calculate BMI</string>
+    <string name="bmi_index">Current BMI Index :</string>
+    <string name="add_height_bmi">Insert Your Height :</string>
+    <string name="add_weight_bmi">Insert Your Weight :</string>
+    <string name="bmi_analysis">BMI Analysis</string>
+    <string name="calculate_bmi">Calculate my BMI</string>
 
-
+    <!--    Home page-->
+    <string name="home_main_title">Your Fitness App</string>
+    <string name="home_news_feed">News Feed</string>
+    <string name="home_explore">Explore</string>
+    <string name="home_tips">Tips</string>
+    <string name="scroll_view_main_water">Water</string>
+    <string name="scroll_view_main_diet">Diet</string>
+    <string name="scroll_view_main_workout">Workout</string>
+    <string name="scroll_view_main_weight">Weight</string>
+    <string name="scroll_view_main_sleep">Sleep</string>
 </resources>

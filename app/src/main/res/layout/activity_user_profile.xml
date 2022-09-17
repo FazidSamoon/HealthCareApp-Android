@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UserProfile"
+    tools:context=".activity.UserProfile"
     android:padding="10dp">
 
     <RelativeLayout
         android:id="@+id/profile_banner"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="150dp"
         android:background="@color/primary_btn"
         android:layout_marginTop="10dp"
         android:layout_marginStart="10dp"
@@ -46,9 +46,9 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="330dp"
         android:layout_below="@id/profile_banner"
-
+        android:id="@+id/scrollable_content"
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="5dp">
@@ -147,13 +147,13 @@
                     </LinearLayout>
 
                     <com.google.android.material.button.MaterialButton
-                        android:layout_width="150dp"
-                        android:layout_height="50dp"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
                         android:layout_below="@id/dobField"
                         android:layout_alignParentEnd="true"
                         android:layout_marginHorizontal="40dp"
                         android:layout_marginTop="2dp"
-                        android:layout_marginEnd="21dp"
+                        android:layout_marginEnd="4dp"
                         android:text="@string/title_text_userprofile_edit_details"
                         app:backgroundTint="@color/bg_main" />
                 </RelativeLayout>
@@ -173,13 +173,12 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#50000000"
+                    android:background="#90000000"
+                    android:gravity="center"
+                    android:text="@string/title_text_userprofile_food_plan"
+                    android:textColor="@color/white"
                     android:textSize="30dp"
-                    android:text="Food Plans"
-                    android:textColorHint="@color/white"
-                    android:textStyle="bold"
-                    android:textColor="@color/text_main"
-                    android:gravity="center" />
+                    android:textStyle="bold" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -190,18 +189,20 @@
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="5dp"
-                android:background="@drawable/food_plan"
+                android:background="@drawable/workout_plan"
                 android:gravity="center">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#50000000"
+                    android:background="#90000000"
+                    android:gravity="center"
+                    android:text="@string/title_text_userprofile_workout_plan"
+                    android:textColor="@color/white"
                     android:textSize="30dp"
-                    android:text="Food Plans"
-                    android:textStyle="bold"
-                    android:textColor="@color/text_main"
-                    android:gravity="center" />
+                    android:textStyle="bold" />
+
+
             </RelativeLayout>
 
             <RelativeLayout
@@ -220,14 +221,108 @@
                     android:layout_height="match_parent"
                     android:background="#50000000"
                     android:textSize="30dp"
-                    android:text="Food Plans"
-                    android:textColorHint="@color/white"
+                    android:text="@string/title_text_userprofile_calculate_BMI"
                     android:textStyle="bold"
-                    android:textColor="@color/text_main"
-                    android:gravity="center" />
+                    android:textColor="@color/white"
+                    android:gravity="center"/>
             </RelativeLayout>
         </RelativeLayout>
     </ScrollView>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/scrollable_content"
+        android:layout_marginTop="20dp">
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="0dp"
+            android:gravity="bottom"
+            app:fabCradleMargin="8dp"
+            app:fabCradleRoundedCornerRadius="58dp"
+            app:fabCradleVerticalOffset="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+                <LinearLayout
+                    android:id="@+id/home_button_bottomAppBar"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:src="@drawable/user" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Home"
+                        android:textColor="@color/text_main"
+                        android:textSize="12sp"
+                        android:textAlignment="center" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/account_button_bottomAppBar"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:src="@drawable/home" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Home"
+                        android:textColor="@color/text_main"
+                        android:textSize="12sp"
+                        android:textAlignment="center" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/settings_button_bottomAppBar"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:src="@drawable/settings"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Home"
+                        android:textColor="@color/text_main"
+                        android:textSize="12sp"
+                        android:textAlignment="center" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/bg_main"
+            android:src="@drawable/home"
+            app:backgroundTint="#ff5e00"
+            app:layout_anchor="@id/app_bar"
+            ></com.google.android.material.floatingactionbutton.FloatingActionButton>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
 
 
 </RelativeLayout>

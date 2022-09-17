@@ -4,34 +4,506 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@drawable/bg">
+    tools:context=".activity.IntroActivity"
+    android:background="@drawable/bg"
+    android:padding="10dp">
 
     <TextView
+        android:id="@+id/main_heading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/title_loading_screen"
-        android:textColor="@color/white"
-        android:textSize="35dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="200dp"
-        android:gravity="center"
+        android:text="Your Fitness App"
+        android:textSize="25dp"
         android:textStyle="bold"
-        android:fontFamily="sans-serif-medium"
-        android:id="@+id/headingMain" />
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/getStarted"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:layout_below="@id/headingMain"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginRight="10dp"
-        android:background="@color/teal_700"
-        android:text="@string/title_loading_screen_button" />
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/main_heading"
+        android:layout_marginTop="-1dp"
+        app:srcCompat="@drawable/banner" />
 
+    <LinearLayout
+        android:id="@+id/topicNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/imageView2"
+        android:gravity="center_horizontal">
 
+        <LinearLayout
+            android:id="@+id/newsFeed"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:background="#50ffffff"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/main_heading"
+                android:layout_marginTop="-1dp"
+                app:srcCompat="@drawable/publication"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home_news_feed"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tips"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:background="#50ffffff"
+            android:padding="5dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/main_heading"
+                android:layout_marginTop="-1dp"
+                app:srcCompat="@drawable/explore"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home_explore"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/explore"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:background="#50ffffff"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/main_heading"
+                android:layout_marginTop="-1dp"
+                app:srcCompat="@drawable/idea"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home_tips"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollable_content"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@id/topicNav"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:background="#50ffffff"
+                        android:padding="5dp">
+
+                        <LinearLayout
+                            android:id="@+id/headingPanelWater"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_below="@id/main_heading"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="-1dp"
+                                app:srcCompat="@drawable/drop" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="@string/scroll_view_main_water"
+                                android:textAlignment="center"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <ProgressBar
+                            android:id="@+id/progressBarWater"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="105dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/headingPanelWater"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="43dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/progressBarWater"
+                            android:text="5 glasses consumed"
+                            android:textAlignment="center" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1"
+                        android:background="#50ffffff"
+                        android:padding="5dp">
+
+                        <LinearLayout
+                            android:id="@+id/headingPanelDiet"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_below="@id/main_heading"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="-1dp"
+                                app:srcCompat="@drawable/burger" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="@string/scroll_view_main_diet"
+                                android:textAlignment="center"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <ProgressBar
+                            android:id="@+id/progressBarDiet"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="105dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/headingPanelDiet"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="43dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/progressBarDiet"
+                            android:text="106 calories burned"
+                            android:textAlignment="center" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:background="#50ffffff"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:id="@+id/headingPanelWorkout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_below="@id/main_heading"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="-1dp"
+                            app:srcCompat="@drawable/weights" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text="@string/scroll_view_main_workout"
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <ProgressBar
+                        android:id="@+id/progressBarWorkout"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="105dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/headingPanelWorkout"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="43dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/progressBarWorkout"
+                        android:text="5 glasses consumed"
+                        android:textAlignment="center" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:background="#50ffffff"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:id="@+id/headingPanelWeight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_below="@id/main_heading"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="-1dp"
+                            app:srcCompat="@drawable/sleeping" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text="@string/scroll_view_main_sleep"
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <ProgressBar
+                        android:id="@+id/progressBarSleep"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="105dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/headingPanelWeight"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="43dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/progressBarSleep"
+                        android:text="106 calories burned"
+                        android:textAlignment="center" />
+                </RelativeLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_gravity="center_horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:background="#50ffffff"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:id="@+id/headingPanelBMI"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_below="@id/main_heading"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="-1dp"
+                            app:srcCompat="@drawable/weights" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text="@string/scroll_view_main_workout"
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <ProgressBar
+                        android:id="@+id/progressBarBMI"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="105dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/headingPanelBMI"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="43dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/progressBarBMI"
+                        android:text="5 glasses consumed"
+                        android:textAlignment="center" />
+                </RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_below="@id/scrollable_content"
+        android:layout_marginTop="40dp">
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="69dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="0dp"
+            android:gravity="bottom"
+            app:fabCradleMargin="8dp"
+            app:fabCradleRoundedCornerRadius="58dp"
+            app:fabCradleVerticalOffset="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:id="@+id/home_button_bottomAppBar"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:src="@drawable/user" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Home"
+                        android:textAlignment="center"
+                        android:textColor="@color/text_main"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/account_button_bottomAppBar"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:src="@drawable/home" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Home"
+                        android:textAlignment="center"
+                        android:textColor="@color/text_main"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/settings_button_bottomAppBar"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:src="@drawable/settings" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Home"
+                        android:textAlignment="center"
+                        android:textColor="@color/text_main"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/bg_main"
+            android:src="@drawable/home"
+            app:backgroundTint="#ff5e00"
+            app:layout_anchor="@id/app_bar"></com.google.android.material.floatingactionbutton.FloatingActionButton>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </RelativeLayout >
