@@ -120,6 +120,11 @@
     <string name="meal_link_view_meal_plan">View meal plans</string>
     <string name="meal_link_create_meal_plan">Create your own diet plan</string>
     <string name="meal_link_my_diet_plan">My diet plan</string>
+    <string name="meal_main_heading">Nutrients</string>
+    <string name="meal_cal_consumed">Kcal consumed</string>
+    <string name="meal_protein">Proteins</string>
+    <string name="meal_carbs">Carbs</string>
+    <string name="meal_fats">Fats</string>
 
 
     <!--    Workout plan view-->

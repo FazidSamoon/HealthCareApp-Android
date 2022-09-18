@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.Edit_meal_plan"
+    android:background="@drawable/createmealbg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#70000000"/>
+
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/meal_main_heading"
+        android:textStyle="bold"
+        android:textSize="35dp"
+        android:textColor="@color/white"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"/>
+
+    <RelativeLayout
+        android:id="@+id/breakfast_field"
+        android:layout_below="@id/heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp">
+
+        <EditText
+            android:id="@+id/bfastinput"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#40D9D9D9"
+            android:hint="@string/meal_hint_breakfast"
+            android:textColorHint="@color/white"
+            android:drawableLeft="@drawable/ic_baseline_restaurant_menu_24"
+            android:drawablePadding="10dp"
+            android:paddingStart="20dp"/>
+
+        <LinearLayout
+            android:id="@+id/double_inputs"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/bfastinput"
+            android:layout_marginTop="10dp"
+            android:weightSum="2">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Food Type"
+                android:textColor="@color/white"
+                android:background="#40D9D9D9"
+                android:layout_marginEnd="5dp"
+                android:paddingStart="20dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:text="Food Type"
+                android:textColor="@color/white"
+                android:background="#40D9D9D9"
+                android:paddingStart="20dp"/>
+        </LinearLayout>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/double_inputs"
+            android:background="#40D9D9D9"
+            android:layout_marginTop="10dp"
+            android:hint="Food Discription"
+            android:textColorHint="@color/white"
+            android:paddingStart="20dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lunchField"
+        android:layout_below="@id/breakfast_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp">
+
+        <EditText
+            android:id="@+id/bfastinput"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#40D9D9D9"
+            android:drawableLeft="@drawable/ic_baseline_fastfood_24"
+            android:drawablePadding="10dp"
+            android:hint="@string/meal_hint_lunch"
+            android:paddingStart="20dp"
+            android:textColorHint="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/double_inputs"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/bfastinput"
+            android:layout_marginTop="10dp"
+            android:weightSum="2">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Food Type"
+                android:textColor="@color/white"
+                android:background="#40D9D9D9"
+                android:layout_marginEnd="5dp"
+                android:paddingStart="20dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:text="Food Type"
+                android:textColor="@color/white"
+                android:background="#40D9D9D9"
+                android:paddingStart="20dp"/>
+        </LinearLayout>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/double_inputs"
+            android:background="#40D9D9D9"
+            android:layout_marginTop="10dp"
+            android:hint="Food Discription"
+            android:textColorHint="@color/white"
+            android:paddingStart="20dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/dinner_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lunchField"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp">
+
+        <EditText
+            android:id="@+id/bfastinput"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#40D9D9D9"
+            android:drawableLeft="@drawable/dinnervector"
+            android:drawablePadding="10dp"
+            android:hint="@string/meal_hint_dinner"
+            android:paddingStart="20dp"
+            android:textColorHint="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/double_inputs"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/bfastinput"
+            android:layout_marginTop="10dp"
+            android:weightSum="2">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:background="#40D9D9D9"
+                android:paddingStart="20dp"
+                android:text="Food Type"
+                android:textColor="@color/white" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:background="#40D9D9D9"
+                android:paddingStart="20dp"
+                android:text="Food Type"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/double_inputs"
+            android:layout_marginTop="10dp"
+            android:background="#40D9D9D9"
+            android:hint="Food Discription"
+            android:paddingStart="20dp"
+            android:textColorHint="@color/white" />
+    </RelativeLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_update"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/dinner_field"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/primary_button"
+        android:text="@string/meal_button_edit_plan"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
