@@ -5,28 +5,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.RegisterActivity"
-    android:background="@color/bg_main">
+    android:background="@drawable/register_bg"
+    android:padding="10dp">
 
     <TextView
+        android:id="@+id/heading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/title_signup_screen"
-        android:textColor="@color/text_main"
-        android:textSize="35dp"
-        android:layout_margin="40dp"
-        android:gravity="center"
-        android:textStyle="bold"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="40dp"
         android:fontFamily="sans-serif-medium"
-        android:id="@+id/heading" />
+        android:gravity="center"
+        android:text="@string/title_signup_screen"
+        android:textColor="@color/white"
+        android:textSize="35dp"
+        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/heading"
         android:id="@+id/linearLayout"
+        android:layout_marginTop="30dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="10dp"
         android:orientation="horizontal"
         android:weightSum="2">
 
@@ -35,7 +40,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/linearLayout"
-            android:background="#354FBDBA"
+            android:background="#35ffffff"
             android:drawableLeft="@drawable/ic_baseline_person_outline_24"
             android:drawablePadding="10dp"
             android:hint="@string/title_SignUp_screen_firstname_input_hint"
@@ -68,9 +73,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/linearLayout"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="10dp"
         android:background="#35ffffff"
         android:drawableLeft="@drawable/ic_baseline_alternate_email_24"
         android:drawablePadding="10dp"
@@ -86,9 +91,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/emailAddress"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="10dp"
         android:background="#35ffffff"
         android:drawableLeft="@drawable/ic_baseline_date_range_24"
         android:drawablePadding="10dp"
@@ -104,9 +109,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/dateOfBirth"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="10dp"
         android:background="#35ffffff"
         android:drawableLeft="@drawable/ic_baseline_person_outline_24"
         android:drawablePadding="10dp"
@@ -121,7 +126,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/userName"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
         android:background="#35ffffff"
@@ -135,15 +140,16 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/signup"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
         android:layout_below="@id/password"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
-        app:backgroundTint="@color/primary_btn"
-        android:text="Register" />
+        android:background="@drawable/primary_button"
+        android:text="Register"
+        android:textColor="@color/white" />
 
 </RelativeLayout>

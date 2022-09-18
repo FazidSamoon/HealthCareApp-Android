@@ -3,7 +3,7 @@
     <string name="app_name">Healthy</string>
 
     <!--    loading screen-->
-    <string name="title_loading_screen">Healthy</string>
+    <string name="title_loading_screen">Get Started</string>
     <string name="title_loading_screen_button">Get Started</string>
 
     <!--    Login screen-->
@@ -13,7 +13,6 @@
     <string name="title_Login_screen_forgotPassword">Forgot Password?</string>
     <string name="title_Login_screen_username_input_hint">Username</string>
     <string name="title_Login_screen_password_input_hint">Password</string>
-
 
     <!--    Signup screen-->
     <string name="title_signup_screen">Sign Up</string>
@@ -32,9 +31,57 @@
     <string name="title_text_userProfile_dateOfBirth">Date of birth</string>
     <string name="title_text_userProfile_email">Email</string>
     <string name="title_text_userprofile_edit_details">Edit Profile</string>
-    <string name="title_text_userprofile_workout_plan">Workout Plan</string>
-    <string name="title_text_userprofile_food_plan">Food Plan</string>
-    <string name="title_text_userprofile_calculate_BMI">Calculate BMI</string>
+    <string name="title_text_userprofile_view_activities">Workout Plan</string>
+    
+    <string name="text_userprofile_activities_create_post_button">New Post</string>
+    <string name="text_userprofile_activities_create_blog_button">New Post</string>
+    <string name="text_userprofile_activities_likes">likes</string>
+    <string name="text_userprofile_activities_comments">Comments</string>
+    <string name="text_userprofile_activities_share">Share</string>
+    <string name="text_userprofile_post_added">days ago</string>
+    <string name="text_form_create_post_heading">Create Post</string>
+    <string name="hint_form_create_post_input_title">Title</string>
+    <string name="hint_form_create_post_input_picture">Pick A picture</string>
+    <string name="hint_form_create_post_input_description">Description</string>
+    <string name="hint_form_create_post_input_tags">Tags</string>
+    <string name="button_form_create_post_submit">Post</string>
+    <string name="text_form_edit_post_heading">Edit Post</string>
+    <string name="button_form_edit_post_submit">Edit Post</string>
+    <string name="button_form_edit_post_delete">Delete Post</string>
+
+
+    <!--    blogs-->
+    <string name="text_form_create_blog_heading">Create Blogs</string>
+    <string name="hint_form_create_blog_input_title">Title</string>
+    <string name="hint_form_create_blog_input_picture">Pick A picture</string>
+    <string name="hint_form_create_blog_input_description">Description</string>
+    <string name="hint_form_create_blog_input_tags">Tags</string>
+
+    <string name="text_form_edit_blog_heading">Edit Blog</string>
+    <string name="button_form_edit_blog_delete">Delete BLog</string>
+    <string name="button_form_edit_blog_edit">Edit BLog</string>
+    <string name="button_form_create_blog_submit">Post</string>
+
+
+    <!--    Explore view-->
+    <string name="text_heading_explore_view">Explore</string>
+    <string name="text_explore_view_likes">likes</string>
+    <string name="text_explore_view_comments">Comments</string>
+    <string name="text_explore_view_share">Share</string>
+    <string name="text_explore_view_post_added">days ago</string>
+    <string name="text_explore_view_comments_input_hint">Comment</string>
+    <string name="text_explore_view_post_owner">Peter</string>
+
+
+    <!--    blog view-->
+    <string name="text_heading_blog_view">Blogs</string>
+    <string name="text_blog_view_likes">likes</string>
+    <string name="text_blog_view_comments">Comments</string>
+    <string name="text_blog_view_share">Share</string>
+    <string name="text_blog_view_post_added">days ago</string>
+    <string name="text_blog_view_comments_input_hint">Comment</string>
+    <string name="text_blog_view_post_owner">Peter</string>
+
 
     <!--    BMI view-->
     <string name="title_bmi_view">Calculate BMI</string>
@@ -46,7 +93,7 @@
 
     <!--    Home page-->
     <string name="home_main_title">Your Fitness App</string>
-    <string name="home_news_feed">News Feed</string>
+    <string name="home_news_feed">Blogs</string>
     <string name="home_explore">Explore</string>
     <string name="home_tips">Tips</string>
     <string name="scroll_view_main_water">Water</string>
@@ -54,4 +101,77 @@
     <string name="scroll_view_main_workout">Workout</string>
     <string name="scroll_view_main_weight">Weight</string>
     <string name="scroll_view_main_sleep">Sleep</string>
+    
+    <!--    Meal plan view-->
+    <string name="title_meal_plan">Create your own diet plan</string>
+    <string name="meal_hint_breakfast">Your breakfast plan</string>
+    <string name="meal_hint_lunch">Your lunch plan</string>
+    <string name="meal_hint_dinner">Your dinner plan</string>
+    <string name="meal_hint_snacks">Any snacks ?</string>
+    <string name="meal_hint_duration">Duration</string>
+    <string name="meal_button_create_plan">Create My Plan</string>
+    <string name="meal_heading_breakfast">Breakfast plans</string>
+    <string name="meal_heading_lunch">Lunch plans</string>
+    <string name="meal_heading_dinner">Dinner plans</string>
+    <string name="meal_heading_edit_meal">Edit Your Meal Plan</string>
+    <string name="meal_button_edit_plan">Edit My Plan</string>
+    <string name="meal_title_diet_plan">My diet plan</string>
+    <string name="meal_link_view_meal_plan">View meal plans</string>
+    <string name="meal_link_create_meal_plan">Create your own diet plan</string>
+    <string name="meal_link_my_diet_plan">My diet plan</string>
+
+
+    <!--    Workout plan view-->
+    <string name="title_workout_plan">MY TRAINING</string>
+    <string name="workout_heading_text">Tips to create your workout plan</string>
+    <string name="workout_link_to_my_training">My Training</string>
+    <string name="workout_link_to_set_weekly_goals">SET YOUR WEEKLY GOAL</string>
+    <string name="workout_link_to_set_reminders">Reminder</string>
+    <string name="workout_link_to_set_duration">Rest Duration</string>
+    <string name="workout_create_workout_heading">MY TRAINING</string>
+    <string name="workout_create_workout_sub_text">Add Exercise</string>
+    <string name="workout_create_workout_input_hint_name">Workout Name</string>
+    <string name="workout_create_workout_input_hint_duration">Training Days</string>
+    <string name="workout_create_workout_hint_progress">Enter progress of your weight workout</string>
+    <string name="workout_create_button">Create My Plan</string>
+    <string name="workout_reminder">REMINDER</string>
+    <string name="workout_sound_options">SOUND OPTIONS</string>
+    <string name="workout_sound_option_mute">Mute</string>
+    <string name="workout_sound_voice_guide">Voice Guide</string>
+    <string name="workout_sound_coach_tips">Coach Tips</string>
+    <string name="workout_weight_track">Record Today Weight</string>
+    <string name="workout_update_button">Update my weekly plan</string>
+    <string name="workout_delete_button">Delete my weekly plan</string>
+
+
+    <!--    Water view-->
+    <string name="title_water_plan">“Do You Know that you need 3L of water daily for a healthy diet”</string>
+    <string name="title_sub_water_plan">Some Useful tips!</string>
+    <string name="water_sub_title_tips">Lorem ipsum dolor siing elit. </string>
+    <string name="water_link_select_cups">Select cups</string>
+    <string name="water_link_daily_goals">Add your daily goals</string>
+    <string name="water_link_my_goals">My goals</string>
+    <string name="water_sub_select_cups_title">Select your cups</string>
+    <string name="water_sub_select_cups_quotes">“How about having a cup of tea after lunch .............””</string>
+    <string name="water_target_heading">Add your daily goal</string>
+    <string name="water_target_enter_hint">Enter your daily water target</string>
+    <string name="water_target_mode_weather">Weather mode</string>
+    <string name="water_target_mode_sport">Sport mode</string>
+    <string name="water_target_q1">Did you completed your last goal?</string>
+    <string name="water_target_Set_button">Add target</string>
+    <string name="water_title_target_edit_view">Edit your goal</string>
+    <string name="water_target_edit_button">Update my target</string>
+    <string name="water_target_delete_button">Delete my target</string>
+    <string name="water_goal_title">My goals</string>
+    <string name="water_goal_completed">You have completed 500 ml</string>
+    <string name="water_goal_remain">Remain target 2500 ml</string>
+    <string name="water_daily_goal">Your goal for today</string>
+
+
+    <!--    BMI view-->
+    <string name="BMI_title">BMI Tracker</string>
+    <string name="BMI_link_to_facts">Check BMI facts</string>
+    <string name="BMI_link_to_calculate">Check your BMI</string>
+    <string name="BMI_facts_title">Check BMI facts </string>
+
 </resources>

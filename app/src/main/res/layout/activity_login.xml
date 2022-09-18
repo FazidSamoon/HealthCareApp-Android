@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.LoginActivity"
-    android:background="@drawable/bg">
+    android:background="@drawable/signin_bg"
+    android:padding="10dp">
 
     <TextView
         android:layout_width="match_parent"
@@ -13,7 +14,10 @@
         android:text="@string/title_Login_screen"
         android:textColor="@color/white"
         android:textSize="35dp"
-        android:layout_margin="50dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:gravity="center"
         android:textStyle="bold"
         android:fontFamily="sans-serif-medium"
@@ -25,7 +29,9 @@
         android:layout_height="wrap_content"
         android:textColor="@color/white"
         android:layout_below="@id/heading"
-        android:layout_margin="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:textColorHint="@color/white"
         android:background="#35ffffff"
         android:drawableLeft="@drawable/ic_baseline_person_outline_24"
@@ -39,7 +45,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/userName"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
         android:background="#35ffffff"
@@ -53,20 +59,21 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/loginbtn"
-        android:layout_width="250dp"
+        android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_below="@id/password"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
-        android:background="@color/teal_700"
+        android:background="@drawable/primary_button"
+        android:textColor="@color/white"
         android:text="@string/title_Login_screen_loginButton" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/signup"
-        android:layout_width="250dp"
+        android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_below="@id/loginbtn"
         android:layout_centerHorizontal="true"
@@ -75,6 +82,7 @@
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
         android:background="@drawable/border"
+        android:textColor="@color/green_primary"
         android:text="@string/title_Login_screen_signUpButton" />
 
     <TextView
