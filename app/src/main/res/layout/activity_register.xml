@@ -98,10 +98,10 @@
         android:drawableLeft="@drawable/ic_baseline_date_range_24"
         android:drawablePadding="10dp"
         android:hint="@string/title_Signup_screen_dateOfBirth_input_hint"
+        android:inputType="date"
         android:padding="10dp"
         android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        android:inputType="date"/>
+        android:textColorHint="@color/white" />
 
     <EditText
         android:id="@+id/userName"

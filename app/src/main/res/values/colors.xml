@@ -12,4 +12,5 @@
     <color name="bg_main">#AEFEFF</color>
     <color name="input_main">#AAC4FF</color>
     <color name="text_main">#072227</color>
+    <color name="red">#FB0000</color>
 </resources>
